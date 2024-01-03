@@ -1,11 +1,12 @@
-######
+##################################################
 #
-# Librerias para desscargar y cargar el archivo
+# Esta funcnion descarga el archivo desde google drive 
+#       y luego lo carga a la base de datos definida desde el servicio
 #
-#####
+##################################################
+
 import gdown
 import pandas as pd
-
 
 
 # Funcion para descargar el archivo en drive con la libreria gdonw
