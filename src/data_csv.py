@@ -11,7 +11,8 @@ import pandas as pd
 
 # Funcion para descargar el archivo en drive con la libreria gdonw
 
-def descargar_csv(id):
+def descargar_csv():
+    id='1JzGG10Z0Lkg3WDXfiB82wWo0a6unRjVM'
     print('Inicia la descarga de la información:  ....')
     url = f'https://drive.google.com/uc?id={id}'
     output = 'coordenadas.csv'  
@@ -20,4 +21,8 @@ def descargar_csv(id):
     except:
         print('El Archivo no existe')
 
-descargar_csv('1JzGG10Z0Lkg3WDXfiB82wWo0a6unRjVM')
+def lee_datos():
+    datos=pd.read_csv('coordenadas.csv')
+    return datos
+
+
