@@ -4,7 +4,6 @@ from sqlalchemy import create_engine
 import json
 from decimal import Decimal
 
-
 # Configuración de la conexión a la base de datos MySQL
 db_config = {
     'host': '0.0.0.0',  # Cambiar por la dirección de tu servidor MySQL
