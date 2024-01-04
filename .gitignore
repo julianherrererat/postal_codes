@@ -1,2 +1,16 @@
 __pychache__/
 *.py[cod]
+
+# Ignorar archivos de bases de datos
+*.db
+*.sqlite
+*.sql
+# Ignorar notebooks de Jupyter
+.ipynb_checkpoints/
+*.ipynb
+# Ignorar archivos de MySQL
+*.mysql
+# Ignorar archivos de postcodes
+postcodes/
+.postcodes/
+postcodes/

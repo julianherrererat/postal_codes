@@ -23,8 +23,8 @@ def insertar_datos(datos):
         latitud = row['lat']
 
         # Inserta los valores de 'longitud' y 'latitud' en tu tabla, junto con un ID autoincremental
-        query = f"INSERT INTO {tabla} (longuitud, latitud) VALUES (%s, %s)"
-        cursor.execute(query, (longuitud, latitud))
+        query = f"INSERT INTO {tabla} (latitud, longuitud) VALUES (%s, %s)"
+        cursor.execute(query, (latitud, longuitud))
 
     connection.commit()
     cursor.close()

@@ -1,0 +1,24 @@
+docker exec -it mysql-db mysql -p
+
+
+
+
+sql = """
+                INSERT INTO codigos_postales (postcode, quality, eastings, northings, country, nhs_ha, longitude, latitude, european_electoral_region, primary_care_trust, region, lsoa, msoa, incode, outcode, parliamentary_constituency, admin_district, parish, admin_county, date_of_introduction, admin_ward, ced, ccg, nuts, pfa, distance,admin_district_code ,
+                 admin_county_code,admin_ward_code,
+    parish_code,parliamentary_constituency_code,
+    ccg_code,ccg_id,ced_code,nuts_code,lsoa_code,msoa_code,lau2_code,pfa_code)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    """
+                print('Ok sql')
+                
+                values = (
+                json_carga["postcode"], json_carga["quality"], json_carga["eastings"], json_carga["northings"], json_carga["country"],
+                json_carga["nhs_ha"], json_carga["longitude"], json_carga["latitude"], json_carga["european_electoral_region"],
+                json_carga["primary_care_trust"], json_carga["region"], json_carga["lsoa"], json_carga["msoa"],
+                json_carga["incode"], json_carga["outcode"], json_carga["parliamentary_constituency"], json_carga["admin_district"],
+                json_carga["parish"], json_carga["admin_county"], json_carga["date_of_introduction"], json_carga["admin_ward"],
+                json_carga["ced"], json_carga["ccg"], json_carga["nuts"], json_carga["pfa"],json_carga["distance"],
+                json_carga["admin_district_code"],json_carga["admin_county_code"],json_carga["admin_ward_code"],json_carga["parish_code"],json_carga["parliamentary_constituency_code"],json_carga["ccg_code"],json_carga["ccg_id"],json_carga["ced_code"],
+                json_carga["nuts_code"],json_carga["lsoa_code"],json_carga["msoa_code"],json_carga["lau2_code"],json_carga["pfa_code"])
+                
